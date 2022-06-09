@@ -1,0 +1,7 @@
+# Project exclude paths
+/jpa-day1/target/
+/jpa-day2/target/
+/jpa-day3-manytomany/target/
+/jpa-day3-onetomany/target/
+/jpa-day3-spec/target/
+/modlemapper/target/

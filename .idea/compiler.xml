@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="jpa-day3-manytomany" />
+        <module name="jpa-day1" />
+        <module name="jpa-day3-onetomany" />
+        <module name="jpa-day2" />
+        <module name="jpa-day3-spec" />
+        <module name="modlemapper" />
+        <module name="MyJpaWork" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="jpa-day1" target="1.5" />
+      <module name="jpa-day2" target="1.5" />
+      <module name="jpa-day3-manytomany" target="1.5" />
+      <module name="jpa-day3-onetomany" target="1.5" />
+      <module name="jpa-day3-spec" target="1.5" />
+      <module name="modlemapper" target="1.5" />
+      <module name="MyJpaWork" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="MyJpaWork" options="-parameters" />
+      <module name="modlemapper" options="" />
+    </option>
+  </component>
+</project>

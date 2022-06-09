@@ -1,0 +1,3 @@
+ ModelMapper是一个dto和entity转换的工具类
+ 
+公司框架中有这个依赖，并且有一个CommonAssembler类，就是使用的ModelMapper这个类的方法
