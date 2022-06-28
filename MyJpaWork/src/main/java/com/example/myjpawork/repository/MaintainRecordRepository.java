@@ -9,6 +9,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import javax.transaction.Transactional;
 import java.time.LocalDateTime;
+import java.util.List;
 
 /**
  * @author wangzy
@@ -20,5 +21,18 @@ public interface MaintainRecordRepository extends JpaRepository<MaintainRecord,I
     @Modifying
     @Transactional
     public void updateInsertTimeById(LocalDateTime dateTime,Integer id);
+
+    /**
+     * 根据设备id列表查询维护记录信息
+     * @param equIds
+     * @return
+     */
+    List<MaintainRecord> findAllByEquIdIn(List<Integer> equIds);
+
+    @Query(value = "update maintain_record set last_update_time=?2 where maintain_id in ?1" ,nativeQuery = true)
+    @Modifying
+    @Transactional
+    void updateByMaintainId(List<Integer> Mid,LocalDateTime time);
+
 
 }
