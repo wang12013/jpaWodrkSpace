@@ -67,6 +67,13 @@ public class MaintainRecord {
     @Generated(GenerationTime.ALWAYS)
     private LocalDateTime lastUpdateTime;
 
+
+    /**
+     * text字段能存64000个字符，varchar只能存255个字符
+     */
+    @Column(columnDefinition = "TEXT")
+    private String details;
+
     /**
      * 设备信息,只在MaintainRecord表里建立了外键,@ForeignKey(ConstraintMode.CONSTRAINT)就是有外键
      * 没有外键，--@ForeignKey(ConstraintMode.NO_CONSTRAINT)
@@ -74,5 +81,6 @@ public class MaintainRecord {
    /* @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.PERSIST)
     @JoinColumn(name = "equId",updatable = false,insertable = false,foreignKey = @ForeignKey(ConstraintMode.CONSTRAINT))
     private Equip equip;*/
+
 
 }
